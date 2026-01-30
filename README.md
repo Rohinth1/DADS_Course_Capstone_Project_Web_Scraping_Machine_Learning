@@ -1,0 +1,9 @@
+This project applies data science and machine learning techniques to analyze product data collected from an e-commerce website. The objective was to explore patterns in pricing, ratings, and product categories and evaluate how effectively these features could support clustering and classification tasks.
+
+The dataset was collected through web scraping using Python libraries and included product name, price, category, and rating information. After extraction, the data was cleaned by standardizing formats, handling missing values, and converting variables into appropriate data types. Exploratory data analysis was performed to understand feature distributions and relationships, revealing that price and rating showed variability but limited direct correlation with product categories.
+
+Feature scaling was applied to normalize numerical variables before modeling. Unsupervised learning using K-Means clustering identified meaningful product groupings based on price and rating, with the elbow method and silhouette score validating the cluster structure. These findings indicated that natural segments existed within the data.
+
+Supervised learning models, including Logistic Regression, Support Vector Machine, K-Nearest Neighbors, Random Forest, and XGBoost, were implemented to predict product categories. Performance was evaluated using accuracy and weighted F1-score. Results showed modest predictive performance, suggesting that price and rating alone were insufficient for strong classification outcomes. Hyperparameter tuning provided minor improvements but confirmed that feature limitations were the primary constraint.
+
+Overall, the project demonstrates a complete machine learning workflow from data collection to evaluation. The findings highlight the importance of feature relevance in predictive modeling and suggest that incorporating richer data sources, such as textual product descriptions, could improve classification performance in future work.
