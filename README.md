@@ -1,9 +1,31 @@
-This project applies data science and machine learning techniques to analyze product data collected from an e-commerce website. The objective was to explore patterns in pricing, ratings, and product categories and evaluate how effectively these features could support clustering and classification tasks.
+README
 
-The dataset was collected through web scraping using Python libraries and included product name, price, category, and rating information. After extraction, the data was cleaned by standardizing formats, handling missing values, and converting variables into appropriate data types. Exploratory data analysis was performed to understand feature distributions and relationships, revealing that price and rating showed variability but limited direct correlation with product categories.
+Project Title
+E-Commerce Product Analysis Using Machine Learning
 
-Feature scaling was applied to normalize numerical variables before modeling. Unsupervised learning using K-Means clustering identified meaningful product groupings based on price and rating, with the elbow method and silhouette score validating the cluster structure. These findings indicated that natural segments existed within the data.
+Introduction
+This project applies data science and machine learning techniques to analyze product data collected from an e-commerce website. The primary goal was to identify patterns in pricing and ratings and evaluate how well these features could predict product categories. Both unsupervised and supervised learning methods were used to extract insights from the dataset.
 
-Supervised learning models, including Logistic Regression, Support Vector Machine, K-Nearest Neighbors, Random Forest, and XGBoost, were implemented to predict product categories. Performance was evaluated using accuracy and weighted F1-score. Results showed modest predictive performance, suggesting that price and rating alone were insufficient for strong classification outcomes. Hyperparameter tuning provided minor improvements but confirmed that feature limitations were the primary constraint.
+Data Collection
+The dataset was obtained through web scraping using Python libraries. Key attributes collected included product name, price, category, and rating. The data was stored in CSV format to enable further processing and analysis. This step ensured that sufficient data was available for modeling and evaluation.
 
-Overall, the project demonstrates a complete machine learning workflow from data collection to evaluation. The findings highlight the importance of feature relevance in predictive modeling and suggest that incorporating richer data sources, such as textual product descriptions, could improve classification performance in future work.
+Data Cleaning
+Data cleaning involved standardizing price formats, converting ratings into consistent values, and removing missing or duplicate records. Proper formatting and type conversion ensured the dataset was suitable for analysis. These steps improved data reliability and minimized potential errors in modeling.
+
+Exploratory Data Analysis
+Exploratory analysis was conducted to understand the distribution of price and rating variables. Visualizations revealed that prices were fairly spread across a range, while ratings showed balanced representation across categories. Insights suggested that price and rating alone may not strongly determine product categories.
+
+Feature Scaling
+Feature scaling was applied using standardization to normalize numerical values. This step was necessary for algorithms sensitive to feature magnitude, such as K-Means, Logistic Regression, SVM, and KNN. Scaling ensured fair contribution of each feature during model training.
+
+Unsupervised Learning
+K-Means clustering was used to identify natural groupings based on price and rating. The elbow method and silhouette score helped determine the optimal number of clusters. Results showed that products grouped primarily by pricing patterns, indicating meaningful segmentation within the data.
+
+Supervised Learning
+Several classification models were implemented, including Logistic Regression, Support Vector Machine, K-Nearest Neighbors, Random Forest, and XGBoost. These models aimed to predict product categories using price and rating features. Performance metrics such as accuracy and F1-score indicated modest predictive capability, highlighting limited feature influence.
+
+Model Evaluation
+Model comparison revealed that simpler models performed similarly to more complex ensemble methods. Hyperparameter tuning resulted in minor improvements but did not significantly enhance predictive power. This reinforced that feature informativeness plays a critical role in classification tasks.
+
+Conclusion
+The project demonstrated a complete machine learning workflow from data collection to model evaluation. Unsupervised learning revealed meaningful data patterns, while supervised models showed limited success in category prediction. The findings emphasize the importance of richer feature sets for improving model performance and provide a foundation for future enhancements.
